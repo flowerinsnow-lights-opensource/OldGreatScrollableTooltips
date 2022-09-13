@@ -10,4 +10,8 @@ public interface C {
     String nodeFile = "file";
 
     String errorLanguageFile = "Cannot load language file ";
+
+    String classGuiContainer = "net.minecraft.client.gui.inventory.GuiContainer";
+
+    String bClassGSLogger = "online/flowerinsnow/greatscrollabletooltips/util/GSLogger";
 }

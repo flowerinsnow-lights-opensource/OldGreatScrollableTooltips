@@ -5,7 +5,9 @@ import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.Transform
 import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.TransformerGuiUtils;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 
 public class GSCorePlugin implements IFMLLoadingPlugin {
     public GSCorePlugin() {
@@ -36,5 +38,9 @@ public class GSCorePlugin implements IFMLLoadingPlugin {
     @Override
     public String getAccessTransformerClass() {
         return null;
+    }
+
+    public static boolean equalsAnyOne(Object object, Object... others) {
+        return Arrays.asList(others).contains(object);
     }
 }
