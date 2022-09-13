@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<languageConfig>
+    <selectedLanguage>zh-cmn-Hans</selectedLanguage>
+    <languages>
+        <!-- 简体中文普通话 - 中国 -->
+        <language>
+            <id>zh-cmn-Hans</id>
+            <file>lang/zh_cmn_Hans.xml</file>
+        </language>
+        <!-- English - Great Britain -->
+        <language>
+            <id>en-GB</id>
+            <file>lang/en_GB.xml</file>
+        </language>
+    </languages>
+</languageConfig>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language id="zh-cmn-Hans">
+    <!-- 会扫描所有名为message的节点，属性id为识别符，不可重复 -->
+    <message id="test">测试消息</message>
+</language>
