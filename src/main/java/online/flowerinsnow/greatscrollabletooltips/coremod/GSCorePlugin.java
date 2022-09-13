@@ -1,13 +1,12 @@
 package online.flowerinsnow.greatscrollabletooltips.coremod;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
-import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.TransformerGuiContainer;
-import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.TransformerGuiUtils;
+import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.GuiContainerTransformer;
+import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.GuiScreenTransformer;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.Objects;
 
 public class GSCorePlugin implements IFMLLoadingPlugin {
     public GSCorePlugin() {
@@ -16,8 +15,8 @@ public class GSCorePlugin implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{TransformerGuiUtils.class.getName(),
-                TransformerGuiContainer.class.getName()};
+        return new String[]{GuiScreenTransformer.class.getName(),
+                GuiContainerTransformer.class.getName()};
     }
 
     @Override
