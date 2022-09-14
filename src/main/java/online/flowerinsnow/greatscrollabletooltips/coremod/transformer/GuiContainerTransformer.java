@@ -74,9 +74,9 @@ public class GuiContainerTransformer implements IClassTransformer {
         addList.add(new VarInsnNode(Opcodes.ALOAD, 0)); // this
         addList.add(new InsnNode(Opcodes.DUP)); // this this
         addList.add(new FieldInsnNode(Opcodes.GETSTATIC, C.bClassGuiContainer, "gsToolTipY", "I")); // gsToolTipY this
-        addList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "org/lwjgl/input", "getEventDWheel", "()I", false)); // mouse gsToolTipY this
+        addList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "org/lwjgl/input/Mouse", "getEventDWheel", "()I", false)); // mouse gsToolTipY this
         addList.add(new InsnNode(Opcodes.IADD)); // newGsToolTipY this
-        addList.add(new MethodInsnNode(Opcodes.PUTSTATIC, "org/lwjgl/input", "getEventDWheel", "()I", false));
+        addList.add(new FieldInsnNode(Opcodes.PUTSTATIC, C.bClassGuiContainer, "gsToolTipY", "I"));
         // }
         addList.add(l1);
 
