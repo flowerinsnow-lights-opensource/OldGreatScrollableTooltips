@@ -56,7 +56,7 @@ public class GuiContainerTransformer implements IClassTransformer {
 
         // if (Mouse.getEventDWheel() != 0
         LabelNode l1 = new LabelNode();
-        addList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "org/lwjgl/input", "getEventDWheel", "()I", false));
+        addList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "org/lwjgl/input/Mouse", "getEventDWheel", "()I", false));
         addList.add(new JumpInsnNode(Opcodes.IFEQ, l1));
 
         // && this.hoveredSlot != null
@@ -86,6 +86,7 @@ public class GuiContainerTransformer implements IClassTransformer {
         } else {
             mn.instructions.insertBefore(mn.instructions.getFirst(), addList);
         }
+        mn.maxLocals = 1;
     }
 
     private void transformRenderHoveredToolTip(MethodNode mn) {
