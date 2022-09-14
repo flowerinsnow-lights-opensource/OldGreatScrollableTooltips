@@ -1,5 +1,7 @@
 package online.flowerinsnow.greatscrollabletooltips.config;
 
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import online.flowerinsnow.greatscrollabletooltips.C;
 import online.flowerinsnow.greatscrollabletooltips.util.IDHashMap;
 import online.flowerinsnow.xmlreader.api.node.XMLNode;
@@ -14,6 +16,7 @@ import java.util.HashMap;
 /**
  * 保存所有的语言内容
  */
+@SideOnly(Side.CLIENT)
 public enum LanguageMessage {
     TEST("test");
 

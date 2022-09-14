@@ -1,10 +1,14 @@
 package online.flowerinsnow.greatscrollabletooltips.util;
 
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
 import java.util.HashMap;
 
 /**
  * 将键视为ID
  */
+@SideOnly(Side.CLIENT)
 public class IDHashMap extends HashMap<String, String> {
     @Override
     public String get(Object key) {

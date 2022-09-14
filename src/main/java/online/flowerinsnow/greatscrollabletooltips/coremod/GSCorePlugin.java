@@ -1,6 +1,8 @@
 package online.flowerinsnow.greatscrollabletooltips.coremod;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.GuiContainerTransformer;
 import online.flowerinsnow.greatscrollabletooltips.coremod.transformer.GuiScreenTransformer;
 
@@ -8,6 +10,7 @@ import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Map;
 
+@SideOnly(Side.CLIENT)
 public class GSCorePlugin implements IFMLLoadingPlugin {
     public GSCorePlugin() {
         System.out.println("Loading language.xml");

@@ -1,6 +1,8 @@
 package online.flowerinsnow.greatscrollabletooltips.coremod.transformer;
 
 import net.minecraft.launchwrapper.IClassTransformer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import online.flowerinsnow.greatscrollabletooltips.C;
 import online.flowerinsnow.greatscrollabletooltips.coremod.GSCorePlugin;
 import org.objectweb.asm.ClassReader;
@@ -10,6 +12,7 @@ import org.objectweb.asm.tree.*;
 
 import java.util.List;
 
+@SideOnly(Side.CLIENT)
 public class GuiScreenTransformer implements IClassTransformer {
 
     @Override

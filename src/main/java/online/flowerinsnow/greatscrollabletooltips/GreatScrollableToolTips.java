@@ -4,9 +4,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = GreatScrollableToolTips.MODID, name = GreatScrollableToolTips.NAME, version = GreatScrollableToolTips.VERSION)
+@Mod(modid = GreatScrollableToolTips.MODID, name = GreatScrollableToolTips.NAME, version = GreatScrollableToolTips.VERSION, clientSideOnly = true)
+@SideOnly(Side.CLIENT)
 public class GreatScrollableToolTips
 {
     public static final String MODID = "g_scrollable_tt";
