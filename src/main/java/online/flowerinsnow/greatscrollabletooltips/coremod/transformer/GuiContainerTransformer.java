@@ -80,7 +80,12 @@ public class GuiContainerTransformer implements IClassTransformer {
         // }
         addList.add(l1);
 
-        mn.instructions.insertBefore(mn.instructions.getFirst(), addList);
+        AbstractInsnNode first = mn.instructions.getFirst();
+        if (first == null) {
+            mn.instructions.insert(addList);
+        } else {
+            mn.instructions.insertBefore(mn.instructions.getFirst(), addList);
+        }
     }
 
     private void transformRenderHoveredToolTip(MethodNode mn) {
