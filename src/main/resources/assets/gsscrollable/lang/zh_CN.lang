@@ -1,0 +1,11 @@
+sensitivity.query=[GS] 灵敏度为 %s
+sensitivity.change=[GS] 灵敏度已更新为 %s
+disableincreative.query.enabled=[GS] 创造禁用已启用
+disableincreative.query.disabled=[GS] 创造禁用已禁用
+disableincreative.change.enabled=[GS] 创造禁用已更新至启用
+disableincreative.change.disabled=[GS] 创造禁用已更新至禁用
+reload.success=[GS] 成功重载
+gscommand.usage=[GS] /gs <sensitivity|disableincreative> <值>
+gscommand.sensitivity.onlyint=[GS] /gs disableincreative <1~100>
+gscommand.disableincreative.onlyboolean=[GS] /gs disableincreative <true/false>
+gscommand.reload.noparam=[GS] /gs reload
