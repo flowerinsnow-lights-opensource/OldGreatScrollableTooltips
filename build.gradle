@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    provided('org.spongepowered:mixin:0.8.5') {
+    provided('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
         exclude module: 'guava'
         exclude module: 'commons-io'
         exclude module: 'gson'
@@ -111,6 +111,7 @@ mixin {
 }
 
 tasks.withType(JavaCompile) {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
     options.encoding = "UTF-8"
 }

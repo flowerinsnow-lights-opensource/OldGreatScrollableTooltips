@@ -14,14 +14,14 @@ import org.spongepowered.asm.mixin.Overwrite;
 import java.util.ArrayList;
 import java.util.List;
 
-@Mixin(GuiUtils.class)
+//@Mixin(GuiUtils.class)
 @SideOnly(Side.CLIENT)
 public class MixinGuiUtils {
     /**
      * @author flowerinsnow
      * @reason Modifing
      */
-    @Overwrite
+//    @Overwrite
     public static void drawHoveringText(List<String> textLines, final int mouseX, final int mouseY, final int screenWidth, final int screenHeight, final int maxTextWidth, FontRenderer font) {
         if (!textLines.isEmpty()) {
             HoveringTextDrawingEvent.Pre preEvent = new HoveringTextDrawingEvent.Pre(textLines, mouseX, mouseY, screenWidth, screenHeight, maxTextWidth, font);
