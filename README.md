@@ -1,5 +1,6 @@
 # 项目
-别着急，还没写好
+已完成1.12.2
 
 # 参考
-[https://github.com/Sk1erLLC/ScrollableTooltips](https://github.com/Sk1erLLC/ScrollableTooltips)
+[https://github.com/Sk1erLLC/ScrollableTooltips](https://github.com/Sk1erLLC/ScrollableTooltips)  
+但是吧...我只是参考了效果，没有看源码
