@@ -1,0 +1,11 @@
+sensitivity.query=[GS] Sensitivity is %s
+sensitivity.change=[GS] Sensitivity has been updated to %s
+disableincreative.query.enabled=[GS] Disable in creative is enabled
+disableincreative.query.disabled=[GS] Disable in creative is disabled
+disableincreative.change.enabled=[GS] Disable in creative has been updated to enabled
+disableincreative.change.disabled=[GS] Disable in creative has been updated to disabled
+reload.success=[GS] Reload successfully
+gscommand.usage=[GS] /gs <sensitivity|disableincreative> <value> OR /gs reload
+gscommand.sensitivity.onlyint=[GS] /gs disableincreative <1~100>
+gscommand.disableincreative.onlyboolean=[GS] /gs disableincreative <true/false>
+gscommand.reload.noparam= [GS] /gs reload
