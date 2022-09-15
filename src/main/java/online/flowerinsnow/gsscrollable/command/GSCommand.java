@@ -24,7 +24,7 @@ public class GSCommand extends CommandBase {
 
     @Override
     public String getCommandName() {
-        return "GSScrollableTooltips";
+        return "gsscrollabletooltips";
     }
 
     @Override
