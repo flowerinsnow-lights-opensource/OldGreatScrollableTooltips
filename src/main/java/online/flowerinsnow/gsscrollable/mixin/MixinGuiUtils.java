@@ -66,7 +66,7 @@ public class MixinGuiUtils {
 
             if (needsWrap) {
                 int wrappedTooltipWidth = 0;
-                List<String> wrappedTextLines = new ArrayList<String>();
+                List<String> wrappedTextLines = new ArrayList<>();
                 for (int i = 0; i < preEvent.getTextLines().size(); i++) {
                     String textLine = preEvent.getTextLines().get(i);
                     List<String> wrappedLine = preEvent.getFontRenderer().listFormattedStringToWidth(textLine, tooltipTextWidth);

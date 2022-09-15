@@ -83,7 +83,7 @@ public class GSCommand extends CommandBase {
         } else if (args.length == 2) {
             if ("disableincreative".equalsIgnoreCase(args[0])) {
                 List<String> list = new ArrayList<>(Arrays.asList("true", "false"));
-                list.removeIf(s -> !s.toLowerCase().startsWith(args[0].toLowerCase()));
+                list.removeIf(s -> !s.toLowerCase().startsWith(args[1].toLowerCase()));
                 return list;
             }
         }

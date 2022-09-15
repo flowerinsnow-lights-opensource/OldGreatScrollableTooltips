@@ -30,7 +30,7 @@ public class GSConfig {
 
     public void reload() {
         this.configuration = new Configuration(this.file);
-        this.sensitivity = configuration.getInt(C.configSensitivity, C.configConfig, 3, 1, 100, "滚动灵敏度");
+        this.sensitivity = configuration.getInt(C.configSensitivity, C.configConfig, 5, 1, 100, "滚动灵敏度");
         this.disableInCreative = configuration.getBoolean(C.configDisableInCreative, C.configConfig, true, "在创造模式禁用");
     }
 
