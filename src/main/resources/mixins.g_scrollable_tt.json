@@ -1,0 +1,8 @@
+{
+  "package": "online.flowerinsnow.greatscrollabletooltips.mixin",
+  "mixins": [],
+  "client": [
+    "MixinGuiUtils"
+  ],
+  "server": []
+}
