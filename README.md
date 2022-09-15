@@ -1,5 +1,5 @@
 # 项目
-别着急，还没写好
+目前是第一个正式版本
 
 # 参考
 [https://github.com/Sk1erLLC/ScrollableTooltips](https://github.com/Sk1erLLC/ScrollableTooltips)
