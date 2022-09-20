@@ -19,12 +19,13 @@ import java.util.List;
 public class MixinGuiUtils {
     /**
      * @author flowerinsnow
-     * @reason Modifing
+     * @reason Modifying
      */
     @Overwrite
     public static void drawHoveringText(List<String> textLines, int mouseX, int mouseY, int screenWidth, int screenHeight, int maxTextWidth, FontRenderer font) {
         if (!textLines.isEmpty()) {
-            HoveringTextDrawingEvent.Pre preEvent = new HoveringTextDrawingEvent.Pre(textLines, mouseX, mouseY, screenWidth, screenHeight, maxTextWidth, font);
+            HoveringTextDrawingEvent.Pre preEvent = new HoveringTextDrawingEvent.Pre(
+                    textLines, mouseX, mouseY, screenWidth, screenHeight, maxTextWidth, font, 0, false);
             if (MinecraftForge.EVENT_BUS.post(preEvent)) {
                 return;
             }
@@ -103,9 +104,14 @@ public class MixinGuiUtils {
                 }
             }
 
-//            if (tooltipY + tooltipHeight + 6 > preEvent.screenHeight) {
-//                tooltipY = preEvent.screenHeight - tooltipHeight - 6;
-//            }
+            if (preEvent.isNature()) {
+                if (tooltipY + tooltipHeight + 6 > preEvent.getScreenHeight()) {
+                    tooltipY = preEvent.getScreenHeight() - tooltipHeight - 6;
+                }
+            }
+            if (preEvent.getFinalModify() != 0) {
+                tooltipY += preEvent.getFinalModify();
+            }
 
             final int zLevel = 300;
             final int backgroundColor = 0xF0100010;
@@ -136,6 +142,12 @@ public class MixinGuiUtils {
             GlStateManager.enableDepth();
             RenderHelper.enableStandardItemLighting();
             GlStateManager.enableRescaleNormal();
+
+            MinecraftForge.EVENT_BUS.post(new HoveringTextDrawingEvent.Post(
+                    preEvent.getTextLines(), preEvent.getMouseX(),preEvent.getMouseY(),
+                    preEvent.getScreenWidth(), preEvent.getScreenHeight(),
+                    preEvent.getMaxTextWidth(), preEvent.getFontRenderer(),
+                    preEvent.getFinalModify(), preEvent.isNature()));
         }
     }
 }

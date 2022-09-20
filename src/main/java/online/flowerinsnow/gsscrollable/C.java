@@ -8,4 +8,5 @@ public interface C {
     String configConfig = "config";
     String configSensitivity = "sensitivity";
     String configDisableInCreative = "disable_in_creative";
+    String configSmartMode = "smart_mode";
 }
