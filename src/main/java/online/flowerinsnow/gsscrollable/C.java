@@ -1,4 +1,4 @@
-package online.flowerinsnow.greatscrollabletooltips;
+package online.flowerinsnow.gsscrollable;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

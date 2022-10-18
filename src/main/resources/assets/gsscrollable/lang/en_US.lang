@@ -8,4 +8,4 @@ reload.success=[GS] Reload successfully
 gscommand.usage=[GS] /gs <sensitivity|disableincreative> <value> OR /gs reload
 gscommand.sensitivity.onlyint=[GS] /gs disableincreative <1~100>
 gscommand.disableincreative.onlyboolean=[GS] /gs disableincreative <true/false>
-gscommand.reload.noparam= [GS] /gs reloadgscommand.disableincreative.onlyboolean
+gscommand.reload.noparam= [GS] /gs reload

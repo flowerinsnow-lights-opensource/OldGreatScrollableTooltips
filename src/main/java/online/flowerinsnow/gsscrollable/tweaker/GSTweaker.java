@@ -1,4 +1,4 @@
-package online.flowerinsnow.greatscrollabletooltips.tweaker;
+package online.flowerinsnow.gsscrollable.tweaker;
 
 import net.minecraft.launchwrapper.ITweaker;
 import net.minecraft.launchwrapper.LaunchClassLoader;
@@ -24,7 +24,7 @@ public class GSTweaker implements ITweaker {
     @Override
     public void injectIntoClassLoader(LaunchClassLoader classLoader) {
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.g_scrollable_tt.json");
+        Mixins.addConfiguration("mixins.gsscrollable.json");
         CodeSource codeSource = this.getClass().getProtectionDomain().getCodeSource();
         if (codeSource != null) {
             URL location = codeSource.getLocation();
