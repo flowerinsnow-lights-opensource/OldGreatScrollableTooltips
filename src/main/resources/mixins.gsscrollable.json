@@ -1,8 +1,7 @@
 {
   "package": "online.flowerinsnow.gsscrollable.mixin",
-  "mixins": [],
+  "refmap": "mixins.gsscrollable.refmap.json",
   "client": [
     "MixinGuiUtils"
-  ],
-  "server": []
+  ]
 }

@@ -62,18 +62,6 @@ public class GSCommand extends CommandBase {
                 } else {
                     throw new WrongUsageException("gscommand.disableincreative.onlyboolean");
                 }
-            } else if (args[0].equalsIgnoreCase("smartmode")) {
-                if ("true".equalsIgnoreCase(args[1])) {
-                    GSScrollableTooltips.getConfig().smartMode = true;
-                    GSScrollableTooltips.getConfig().save();
-                    sender.addChatMessage(new ChatComponentTranslation("smartmode.change.enabled"));
-                } else if ("false".equalsIgnoreCase(args[1])) {
-                    GSScrollableTooltips.getConfig().smartMode = false;
-                    GSScrollableTooltips.getConfig().save();
-                    sender.addChatMessage(new ChatComponentTranslation("smartmode.change.disabled"));
-                } else {
-                    throw new WrongUsageException("gscommand.smartmode.onlyboolean");
-                }
             } else {
                 throw new WrongUsageException("gscommand.usage");
             }
@@ -89,7 +77,7 @@ public class GSCommand extends CommandBase {
 
     public List<String> addTabCompletionOptions(ICommandSender sender, String[] args, BlockPos pos) {
         if (args.length == 1) {
-            List<String> list = new ArrayList<>(Arrays.asList("sensitivity", "disableincreative", "smartmode", "reload"));
+            List<String> list = new ArrayList<>(Arrays.asList("sensitivity", "disableincreative", "reload"));
             list.removeIf(s -> !s.toLowerCase().startsWith(args[0].toLowerCase()));
             return list;
         } else if (args.length == 2) {

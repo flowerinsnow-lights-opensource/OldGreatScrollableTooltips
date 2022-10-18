@@ -12,13 +12,11 @@ import java.io.File;
 public class GSConfig {
     public int sensitivity;
     public boolean disableInCreative;
-    public boolean smartMode = false;
     private final File file;
     private Configuration configuration;
 
     private Property entrySensitivity;
     private Property entryDisableInCreative;
-    private Property entrySmartMode;
 
     public GSConfig(File file) {
         this.file = file;
@@ -42,15 +40,11 @@ public class GSConfig {
 
         this.entryDisableInCreative = configuration.get(C.configDisableInCreative, C.configConfig, true, "在创造模式禁用");
         this.disableInCreative = this.entryDisableInCreative.getBoolean();
-
-        this.entrySmartMode = configuration.get(C.configSmartMode, C.configConfig, true, "智能模式");
-        this.smartMode = this.entrySmartMode.getBoolean();
     }
 
     public void save() {
         this.entrySensitivity.set(this.sensitivity);
         this.entryDisableInCreative.set(this.disableInCreative);
-        this.entrySmartMode.set(this.smartMode);
         this.configuration.save();
     }
 }
