@@ -5,3 +5,6 @@
 # 参考
 [https://github.com/Sk1erLLC/ScrollableTooltips](https://github.com/Sk1erLLC/ScrollableTooltips)  
 但是吧...我只是参考了效果，没有看源码
+
+# mdzz
+我真的服了，写这种东西用得着essentials?
